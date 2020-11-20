@@ -6,17 +6,9 @@ class Exo5 extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <View style={[styles.square, {backgroundColor: 'red'}]}>
-          <Text>Square 1</Text>
-        </View>
-
-        <View style={[styles.square, {backgroundColor: 'blue'}]}>
-          <Text>Square 2</Text>
-        </View>
-
-        <View style={[styles.square, {backgroundColor: 'green'}]}>
-          <Text>Square 3</Text>
-        </View>
+        <Square text="Square 1" color="lightblue"/>
+        <Square text="Square 2" color="lightgreen"/>
+        <Square text="Square 3" color="red"/>
       </View>
     )
   }
@@ -28,15 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row'
-  },
-  square: {
-    height: 100,
-    width: 100,
-    justifyContent: 'center',
-    alignItems: 'center'
   }
 })
-
-
 
 export default Exo5;
