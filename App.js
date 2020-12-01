@@ -8,6 +8,7 @@ import  Exo3  from './src/exos/Exo3';
 import  Exo4  from './src/exos/Exo4';
 import  Exo5  from './src/exos/Exo5';
 import  Exo6  from './src/exos/Exo6';
+import  Exo7  from './src/exos/Exo7';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Exo4" component={Exo4} />
         <Stack.Screen name="Exo5" component={Exo5} />
         <Stack.Screen name="Exo6" component={Exo6} />
+        <Stack.Screen name="Exo7" component={Exo7} />
       </Stack.Navigator>
     </NavigationContainer>
   );
