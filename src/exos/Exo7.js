@@ -1,19 +1,45 @@
-import React, { Component } from "react";
-import { View } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import React, { Component, useState } from "react";
+import { View, StyleSheet, Text, TextInput, SafeAreaView, Alert } from "react-native";
+import Button from '../components/Button';
 
-class Exo7 extends Component {
-  render() {
+const Exo7 = () => {
 
-    const [value, onChangeText] = React.useState('');
-    
-    return(
-      <View>
-        <Text>What is your name ?</Text>
-        <TextInput />
+    const [userName, setUserName] = useState('');
+
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Whats is your name ?</Text>
+        <TextInput
+          value={userName}
+          onChangeText={(userName) => setUserName(userName)}
+          style={styles.input}
+        />
+        <Button text="Say hello" onPress={() => Alert.alert('Hello')}/>
       </View>
-    )
-  }
+    </SafeAreaView>
+    );
+  
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  text: {
+    marginTop: 20
+  },
+  input: {
+    width: 250,
+    height: 44,
+    padding: 10,
+    marginTop: 20,
+    marginBottom: 10,
+    backgroundColor: '#e8e8e8',
+    borderRadius: 5
+  },
+});
 
 export default Exo7;

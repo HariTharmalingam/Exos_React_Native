@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import { View, StyleSheet, Button, Alert } from "react-native";
-import Counter from '../components/Counter';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Counter from "../components/Counter"
 
-
-class Exo4 extends Component {
-
+class Exo11 extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -38,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Exo4;
+export default Exo11;

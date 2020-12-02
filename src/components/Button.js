@@ -6,19 +6,18 @@ class Button extends Component {
     super(props);
   }
 
-  Alert() {
+  showAlert = () => 
     Alert.alert(
       "Alert",
-      onPress
+      this.onPress
     );
-  }
 
   render() {
     const { text } = this.props;
     const { onPress } = this.props;
 
     return (
-      <TouchableOpacity style={styles.button} onPress={() => this.Alert()}>
+      <TouchableOpacity style={styles.button} onPress={() => {this.showAlert()}}>
         <Text style={styles.text}>{text}</Text>
       </TouchableOpacity>
     );
@@ -27,7 +26,7 @@ class Button extends Component {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'pink',
+    backgroundColor: '#FF00BA',
     padding: 10,
     marginVertical: 20,
     borderRadius: 10
