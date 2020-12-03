@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { View, StyleSheet, Text, TextInput, SafeAreaView, Alert } from "react-native";
+import { View, StyleSheet, Text, TextInput, SafeAreaView } from "react-native";
 import Button from '../components/Button';
 
 const Exo7 = () => {
@@ -15,7 +15,7 @@ const Exo7 = () => {
           onChangeText={(userName) => setUserName(userName)}
           style={styles.input}
         />
-        <Button text="Say hello" onPress={() => Alert.alert('Hello')}/>
+        <Button text="Say hello" onPress={`Hello ${userName}`}/>
       </View>
     </SafeAreaView>
     );
